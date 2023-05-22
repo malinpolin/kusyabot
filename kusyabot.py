@@ -13,6 +13,7 @@ from core import (
         HELP_TEXT, READY_TEXT,
         ANSWER_TEXT, DECIPHER_TEXT,
         FIND_TEXT, HIDE_KB,
+        WEB_APP_FILMS, WEB_APP_CHARACTERS, WEB_APP_JAPAN,
         HELPS, ANSWERS,
         TASK_PICS, GOOD_PICS, PLACE_PICS,
         GOOD_PHRASES, TRY_PHRASES, TRY_PHRASES_ADD,
@@ -154,7 +155,7 @@ def process_task(user):
 
     if task.get(user) == 2:
         if step.get(user) == 0:
-            web_app=telebot.types.WebAppInfo('https://malinpolin.pythonanywhere.com/films')
+            web_app=telebot.types.WebAppInfo(WEB_APP_FILMS)
             kb.add(telebot.types.KeyboardButton('Поехали!', web_app=web_app))
             send_msg(user, 'Сможешь угадать фильм по кадру, постеру, фан-арту или фото со съёмок?', kb)
 
@@ -203,7 +204,7 @@ def process_task(user):
             send_msg(user, ANSWERS.get(task.get(user)), kb)
 
     if task.get(user) == 5:
-        web_app=telebot.types.WebAppInfo('https://malinpolin.pythonanywhere.com/japan')
+        web_app=telebot.types.WebAppInfo(WEB_APP_JAPAN)
         if step.get(user) == 0:
             kb.add(telebot.types.KeyboardButton('Жми', web_app=web_app))
             send_msg(user, 'Пришло время пятого задания:')
@@ -219,7 +220,7 @@ def process_task(user):
     if task.get(user) == 6:
         if step.get(user) == 0:
             send_msg(user, 'Якорь мне в печень, мы добрались до финального задания!')
-            web_app=telebot.types.WebAppInfo('https://malinpolin.pythonanywhere.com/characters')
+            web_app=telebot.types.WebAppInfo(WEB_APP_CHARACTERS)
             kb.add(telebot.types.KeyboardButton('Поехали!', web_app=web_app))
             send_msg(user, 'В трёх картинках я загадала известных персонажей.')
             send_msg(user, 'Угадай их всех, если сможешь' + E_IF_U_CAN, kb)

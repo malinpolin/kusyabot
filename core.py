@@ -7,6 +7,9 @@ ANSWER_TEXT = 'Давай уже свой ответ...'
 DECIPHER_TEXT = 'Расшифруй записку...'
 FIND_TEXT = 'Я нашёл!'
 HIDE_KB = 1
+WEB_APP_FILMS = 'https://malinpolin.pythonanywhere.com/films'
+WEB_APP_JAPAN = 'https://malinpolin.pythonanywhere.com/japan'
+WEB_APP_CHARACTERS = 'https://malinpolin.pythonanywhere.com/characters'
 
 
 TASK_PICS = {
