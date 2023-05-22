@@ -1,6 +1,9 @@
 ## Описание
 
+Квест-бот для поиска подарка на день рождения.
 
+Доступен по 
+![qr](https://github.com/malinpolin/kusyabot/assets/98105796/7c47abea-94ed-41eb-ade1-3b13ba3e42fb)
 
 
 
@@ -65,8 +68,9 @@ pip install -r requirements.txt
 nano .env
 ```
 #### Записать переменную
+```bash
 TOKEN = <ВАШ API-токен>
-
+```
 
 ### 7. Запустить проект:
 ##### Linux или MacOS
