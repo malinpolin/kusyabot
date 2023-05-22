@@ -2,8 +2,9 @@
 
 Квест-бот для поиска подарка на день рождения.
 
-Доступен по 
-![qr](https://github.com/malinpolin/kusyabot/assets/98105796/7c47abea-94ed-41eb-ade1-3b13ba3e42fb)
+Доступен по QR-коду:
+
+![qr](https://github.com/malinpolin/kusyabot/assets/98105796/b4e45fbc-f890-43ca-b163-7f0726b72b05)
 
 
 
