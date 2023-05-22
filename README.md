@@ -6,7 +6,7 @@
 
 Доступен по QR-коду:
 
-![qr](https://github.com/malinpolin/kusyabot/assets/98105796/b4e45fbc-f890-43ca-b163-7f0726b72b05)
+![Image alt](https://github.com/malinpolin/kusyabot/raw/main/pics/qr.png)
 
 Необходимый инвентарь для проведения квеста: 
 - Фрагменты карты помещения, с отмеченным местонахождением клада (6 шт) - задание №1;
