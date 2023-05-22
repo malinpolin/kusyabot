@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/my.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <title>О Японии...</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+        <div>
+            <p><input type="checkbox" class="custom-checkbox" id="1">
+            <label for="1"> Официально Япония до сих пор является империей. Это единственная империя, сохранившаяся до наших дней.</label></p>
+            <p><input type="checkbox" class="custom-checkbox" id="2">
+            <label for="2"> В состав Японии входит почти семь тысяч островов.</label></p>
+            <p><input type="checkbox" class="custom-checkbox" id="3">
+            <label for="3"> Япония — единственное островное государство в мире. </label></p>
+            <p><input type="checkbox" class="custom-checkbox" id="4">
+            <label for="4"> Согласно своей же конституции, Япония не имеет первой права объявлять кому-либо войну.</label></p>
+            <p><input type="checkbox" class="custom-checkbox" id="5">
+            <label for="5"> Сакэ - один из традиционных японских алкогольных напитков, получаемый путем сбраживания сусла на основе винограда. </label></p>
+            <p><input type="checkbox" class="custom-checkbox" id="6">
+            <label for="6"> Снеговиков в Японии лепят из двух снежных шаров, а не из трех, как в других странах.</label></p>
+            <p><input type="checkbox" class="custom-checkbox" id="7">
+            <label for="7"> Япония очень сильно перенаселена.</label></p>
+
+        </div>
+    </main>
+    <footer></footer>
+  </body>
+<script>
+   let tg = window.Telegram.WebApp; //получаем объект webapp телеграма
+
+   tg.expand(); //расширяем на все окно
+
+   tg.MainButton.text = "I'm ready!"; //изменяем текст кнопки
+   tg.MainButton.textColor = "#dd4f4e"; //изменяем цвет текста кнопки
+   tg.MainButton.color = "#3f3f3f"; //изменяем цвет бэкграунда кнопки
+   tg.MainButton.show();
+
+
+   Telegram.WebApp.onEvent('mainButtonClicked', function(){
+      var selected = [];
+      const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+      selected = Array.from(checked).map(x => x.id);
+
+      tg.sendData(selected.join());
+      //при клике на основную кнопку отправляем данные в строковом виде
+   });
+
+
+</script>
+</html>

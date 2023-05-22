@@ -1,0 +1,45 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* flex-контейнер */
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  /* общие настройки для flex-элементов */
+  .col {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  /* ширина блоков .col__article и .col__aside по умолчанию */
+  .col__article  {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 80%;
+  }
+
+  .films {
+    background-image: url(/static/img/films_bg4.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  img {max-width: 90%;}
