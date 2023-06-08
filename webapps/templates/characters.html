@@ -14,11 +14,24 @@
     <script> var first_load = true; </script>
   </head>
   <body class="characters">
+
     <header id="header">
       <div class="container">
         <div class="border20"></div>
-        <div class="col-9">
-          <p class="text-header"> Вопрос <span id="cur-question"></span> из <span id="max-question"></span></p>
+        <div class="row">
+          <div class="col-3" style="text-align:left;">
+            <div id="btn-back" style="display:none;">
+              <input type="image" class='nav-arrows' alt="Назад" src="/static/img/icons/left-arrow.png" onClick="BACKClick();">
+            </div>
+          </div>
+          <div class="col-6">
+             <p class="text-header"> Вопрос <span id="cur-question"></span> из <span id="max-question"></span></p>
+          </div>
+          <div class="col-3" id="btn-back" style="text-align:right;">
+            <div id="btn-next">
+              <input type="image" class='nav-arrows' alt="Вперед" src="/static/img/icons/right-arrow.png" onClick="NEXTClick();">
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -39,44 +52,15 @@
         </div>
 
         <div class="row">
-          <div class="col">
+          <div class="col-3"></div>
+          <div class="col-6">
             <div>
-              <input id="text" type="text">
-              <script type="text/javascript">
-                var old_input_value = '';
-                text.oninput = function() {
-                    const cells = document.getElementById("tbl").getElementsByTagName("td");
-                    var tmp_value = '';
-                    var input_value = text.value;
-                    if (input_value.length < old_input_value.length) {
-                      for (let i = input_value.length; i < old_input_value.length && i < cells.length; i++) {
-                        cells[i].innerHTML = '';
-                      }
-                    }
-                    let answer = window.answers[window.currentImageIndex];
-                    let j = 0;
-                    
-                    while (j < input_value.length) {
-                      if (input_value[j] == ' ' && answer[j] != ' '){
-                          text.value = input_value.substr(0, j);
-                        }
-                      else if (answer[j] == ' ' && input_value[j] != ' ') {
-                        tmp_value = input_value.substr(0, j) + ' ' + input_value[j];
-                        input_value = tmp_value;
-                        text.value = tmp_value;
-                        cells[j].innerHTML = ' ';
-                        j ++;
-                      }
-                      cells[j].innerHTML = input_value[j].toUpperCase();
-                      j ++;
-                    }
-                    window.results[window.currentImageIndex] = input_value;
-                    old_input_value = input_value;
-                    }
- 
-              </script>
+              <input id="text" type="text" oninput="FillAnswerRow();">
               <div class="border20"></div>
             </div>
+          </div>
+          <div class="col-3" id="btn-exit" style="text-align:center;">
+            <input type="image" class='nav-arrows' alt="exit" src="/static/img/icons/exit.png" onclick="EXITClick();">
           </div>
         </div>
 
@@ -96,7 +80,9 @@
       </div>
       <div class="container" id="end" style="display:none;">
         <div class="row end" id="end_tbl">
+          <div class="border20"></div>
           <h1 class="text-header">МИШН КОМПЛИТЕД!</h1>
+          <div class="border20"></div>
           <div class="border20"></div>
           <img id="image" src="/static/img/mission.png" class="img">
           <div class="border20"></div>
@@ -105,6 +91,6 @@
 
     </main>
     <footer></footer>
-  <script src="/static/js/characters.js"></script>  
+    <script src="/static/js/characters.js"></script>
   </body>
 </html>

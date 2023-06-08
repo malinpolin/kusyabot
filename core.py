@@ -1,5 +1,6 @@
 import os
 
+
 TELEGRAM_TOKEN = os.getenv('TOKEN')
 HELP_TEXT = 'Хелп!'
 READY_TEXT = 'Я готов!'
@@ -13,29 +14,29 @@ WEB_APP_CHARACTERS = 'https://malinpolin.pythonanywhere.com/characters'
 
 
 TASK_PICS = {
-    1: 'task_pics/1.jpg',
-    4: 'task_pics/4.png'
+    1: 'images/task_pics/1.jpg',
+    4: 'images/task_pics/4.png'
 }
 
 
 PLACE_PICS = {
-    3: 'place_pics/3.jpg',
-    5: 'place_pics/5.jpg',
-    6: 'place_pics/6.jpg',
+    3: 'images/place_pics/3.jpg',
+    5: 'images/place_pics/5.jpg',
+    6: 'images/place_pics/6.jpg',
 }
 
 
 GOOD_PICS = [
-    'breathtaking/1.jpg',
-    'breathtaking/2.jpg',
-    'breathtaking/3.jpg',
-    'breathtaking/4.jpg',
-    'breathtaking/5.jpg',
-    'breathtaking/6.jpg',
-    'breathtaking/7.jpg',
-    'breathtaking/8.jpg',
-    'breathtaking/9.jpg',
-    'breathtaking/10.jpg'
+    'images/good_pics/1.jpg',
+    'images/good_pics/2.jpg',
+    'images/good_pics/3.jpg',
+    'images/good_pics/4.jpg',
+    'images/good_pics/5.jpg',
+    'images/good_pics/6.jpg',
+    'images/good_pics/7.jpg',
+    'images/good_pics/8.jpg',
+    'images/good_pics/9.jpg',
+    'images/good_pics/10.jpg'
 ]
 
 ANIME_NAMES = {
